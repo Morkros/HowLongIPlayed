@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>How Long Have I Played?</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
+</head>
+
+<body>
+    <div>
+        <h1 class="">How Long Have I Played?</h1>
+        <details>
+            <summary>How to get your SteamID</summary>
+            <p style="white-space: pre-line;">• select your Steam username in the top right corner of the screen.
+                • Select ''Account details''.
+                • Your Steam ID can be found below your Steam username.
+
+                (ONLY works if your profile is public.)
+            </p>
+        </details>
+        <table>
+            <tr>
+                <td>
+                    <label for="steamid">Steam ID</label>
+                    <input type="text" id="steamid">
+                </td>
+                <td>
+                    <label for="hourFilter">¿minimum of hours?</label>
+                    <input type="number" id="hourFilter">
+                </td>
+            </tr>
+        </table>
+        <button onclick="Search()">Search</button>
+    </div>
+    <div>
+        <canvas id="timePie"></canvas>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/functions.js"></script>
+
+</html>

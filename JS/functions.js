@@ -2,10 +2,11 @@ let graphChart; // //variable global para contener el gráfico
 
 function Search() {
     const steamID = document.getElementById('steamid').value;
-    const url = `http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=05AEFB4CBE4C3757E2EBFD2DE4E78821&steamid=${steamID}&include_appinfo=true&include_played_free_games=true&format=json`
+    const steamApiKey = '05AEFB4CBE4C3757E2EBFD2DE4E78821';
+    const url = `http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=${steamApiKey}&steamid=${steamID}&include_appinfo=true&include_played_free_games=true&format=json`
     let hourFilter = document.getElementById('hourFilter');
     hourFilter = hourFilter.value;
-
+    
     if (hourFilter == "") { //comprueba que el valor del filtro no este vacío y lo coloca en cero, o multiplica el valor por 60 para obtener los minutos
         hourFilter = 0;
     } else {
